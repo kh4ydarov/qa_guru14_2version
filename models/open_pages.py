@@ -1,6 +1,6 @@
 import allure
 
-from selene import browser, be
+from selene import browser, be, command
 
 
 class OpenPage:
@@ -43,5 +43,9 @@ class OpenPage:
             browser.element('//a[contains(text(), "Вакансии")]').click()
             return self
 
+    with allure.step("Открываем модальное окно записаться"):
+        def modal_submitting(self):
+            browser.element('.style_btn__b5YdX').perform(command.js.scroll_into_view).click()
+            return self
 
 open = OpenPage()
