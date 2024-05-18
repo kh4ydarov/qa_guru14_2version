@@ -9,6 +9,12 @@ class OpenPage:
             browser.open("")
             return self
 
+
+    with allure.step("Переход на страницу авторизации"):
+        def auth(self):
+            browser.element("//*[@id='__next']/div[2]/nav/div/div[3]/div/a[1]").click()
+            return self
+
     with allure.step("Переход на страницу О нас"):
         def about_us(self):
             browser.element('//a[contains(text(), "О нас")]').click()
