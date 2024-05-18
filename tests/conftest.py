@@ -1,6 +1,6 @@
 import pytest
 import os
-from selene import browser, be, have
+from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from utils import attach

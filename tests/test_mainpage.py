@@ -1,5 +1,5 @@
-
 from models.open_pages import open
+
 
 def test_mainpage():
     open.open_site()
@@ -7,4 +7,3 @@ def test_mainpage():
     open.teachers()
     open.prices()
     open.gallery()
-
