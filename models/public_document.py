@@ -4,10 +4,11 @@ from selene import browser
 
 
 class PublicDocs:
-    with allure.step("Публичная оферта"):
-        def public_document(self):
+
+    def public_document(self):
+        with allure.step("Публичная оферта"):
             browser.element('//a[contains(text(), "Публичная оферта")]').click()
-            return self
+        return self
 
 
 public_docs = PublicDocs()

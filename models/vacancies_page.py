@@ -4,10 +4,11 @@ from selene import browser
 
 
 class VacanciesPage:
-    with allure.step("Переход на страницу вакансии"):
-        def vacancies(self):
+
+    def vacancies(self):
+        with allure.step("Переход на страницу вакансии"):
             browser.element('//a[contains(text(), "Вакансии")]').click()
-            return self
+        return self
 
 
 vacancies_page = VacanciesPage()
