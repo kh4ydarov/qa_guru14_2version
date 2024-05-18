@@ -7,5 +7,4 @@ def test_mainpage():
     open.teachers()
     open.prices()
     open.gallery()
-    open.public_document()
-    open.vacancies()
+

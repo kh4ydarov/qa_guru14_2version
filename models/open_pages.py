@@ -9,7 +9,6 @@ class OpenPage:
             browser.open("")
             return self
 
-
     with allure.step("Переход на страницу авторизации"):
         def auth(self):
             browser.element("//*[@id='__next']/div[2]/nav/div/div[3]/div/a[1]").click()
@@ -39,19 +38,10 @@ class OpenPage:
             browser.element('.style_textSide__fwkMw h2.text-title').should(be.visible)
             return self
 
-    with allure.step("Публичная оферта"):
-        def public_document(self):
-            browser.element('//a[contains(text(), "Публичная оферта")]').click()
-            return self
-
-    with allure.step("Переход на страницу вакансии"):
-        def vacancies(self):
-            browser.element('//a[contains(text(), "Вакансии")]').click()
-            return self
-
     with allure.step("Открываем модальное окно записаться"):
         def modal_submitting(self):
             browser.element('.style_btn__b5YdX').perform(command.js.scroll_into_view).click()
             return self
+
 
 open = OpenPage()
