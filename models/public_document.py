@@ -1,6 +1,6 @@
 import allure
 
-from selene import browser, be, command
+from selene import browser
 
 
 class PublicDocs:
